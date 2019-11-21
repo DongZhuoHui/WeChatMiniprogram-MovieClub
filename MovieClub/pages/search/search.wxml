@@ -1,0 +1,12 @@
+<view style='width:100%; overflow-x:hidden;'>
+  <view class='search-list' wx:for="{{movie}}" wx:key="unique">
+    <image class='search-image-small' src="{{item.Cover}}" mode='scaleToFill'></image>
+    <view class='search-list-detail' catchtap='movieToDetail' data-object-id='{{item.ID}}' data-name='{{item.Name}}'>
+      <text class='search-keyword'>{{item.Name}}</text>
+      <text class='search-detail'>类型：{{item.Tags}}</text>
+      <text class='search-detail'>年份：{{item.Year}}</text>
+      <text class='search-detail'>评分：{{item.Score}}</text>
+    </view>
+      <text class='search-MovieDetail'>{{item.MovieTitle}}</text>
+  </view>
+</view>

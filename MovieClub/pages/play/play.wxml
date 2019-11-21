@@ -1,0 +1,12 @@
+<view class='play-background' style='background-image: url(\'{{PlayData.Cover}}\');'>
+  <view class='play-box'>
+    <video class='play-video' src="{{VideoUrl}}"></video>
+    <view class='content'>
+      <text class='play-content'>{{PlayData.Introduction}}</text>
+      <view class='play-playlist'>
+        <text style='font-size:11px'>剧集:\n</text>
+        <text class='play-listindex' wx:for="{{PlayData.MoviePlayUrls}}" wx:key="unique" data-video-url='{{item.PlayUrl}}' catchtap='chooseVideo'>{{item.Name}}</text>
+      </view>
+    </view>
+  </view>
+</view>

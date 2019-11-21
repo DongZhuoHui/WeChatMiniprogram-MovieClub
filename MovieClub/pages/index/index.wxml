@@ -1,0 +1,28 @@
+<view style='width:100%;overflow-x:hidden;'>
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="请输入查询内容" value="{{SearchData}}" bindinput='SearchInput' bindconfirm="SearchConfirm" data-search-data='{{SearchData}}' />
+        <view class="weui-icon-clear" wx:if="{{SearchData.length > 0}}" bindtap="SearchClear">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+    </view>
+    <view class="weui-search-bar__cancel-btn">
+      <text wx:if="{{SearchData.length>0}}" data-search-data='{{SearchData}}' catchtap='movieToSearch'>搜索</text>
+      <text wx:else data-key='back'></text>
+    </view>
+  </view>
+
+  <view class='movie-list' wx:for="{{movie}}" wx:key="unique">
+    <image class='movie-image-small' src="{{item.Cover}}" mode='scaleToFill'></image>
+    <view class='movie-list-detail' catchtap='movieToDetail' data-id='{{item.ID}}'  data-name='{{item.Name}}'>
+      <text class='movie-keyword'>{{item.Name}}</text>
+      <text class='movie-detail'>类型：{{item.Tags}}</text>
+      <text class='movie-detail'>年份：{{item.Year}}</text>
+      <text class='movie-detail'>评分：{{item.Score}}</text>
+    </view>
+    <text class='movie-MovieDetail'>{{item.MovieTitle}}</text>
+  </view>
+</view>

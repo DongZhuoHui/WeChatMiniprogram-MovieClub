@@ -1,0 +1,56 @@
+page{
+height: 100%;
+}
+.play-background{
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.play-box{
+  flex-direction: column;
+  margin-top: 100rpx;
+  justify-content: center;
+  display: flex;
+  width: 600rpx;
+  height: 1050rpx;
+  background-color:#fff;
+  border-radius: 2%;
+}
+.play-video{
+  width: 600rpx;
+}
+.play-playlist{
+  position: relative;
+  font-display: #eee;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.play-listindex{
+  font-size: 10px;
+  margin-right: 10rpx;
+  border: 1px solid gainsboro;
+  border-radius: 10%;
+  width: 20rpx;
+  height: 20rpx;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+}
+.play-content{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+  margin-right: 20rpx;
+  font-size: 10px;
+  font-display: #eee;
+  display: -webkit-box;
+  line-height: 40rpx;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:7;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}

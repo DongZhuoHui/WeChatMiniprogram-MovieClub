@@ -1,0 +1,23 @@
+<view class='detail-background' style='background-image: url(\'{{movie.Cover}}\');'>
+  <view class='detail-box' animation="{{animation}}">
+    <view>
+      <image class='detail-image' src='{{movie.Cover}}'></image>
+      <view>
+        <text class='detail-title'>{{movie.Name}}</text>
+      </view>
+      <view>
+        <text class='detail-geners'>{{movie.Tags}}</text>
+      </view>
+      <view>
+        <text class='detail-play' catchtap='movieToPlay' data-play-data='{{movie}}'>点击播放</text>
+      </view>
+      <text class='detail-favorite' catchtap='toFavorite' data-play-data='{{movie}}'>收藏</text>
+      <view>
+        <text class='detail-download' catchtap='toDownload' data-download-code='{{moviedownload.Code}}' data-download-result='{{moviedownload.ResultData[0].Results}}'>点击复制下载链接</text>
+      </view>
+    </view>
+    <view class='content'>
+      <text class='detail-content'>{{movie.Introduction}}</text>
+    </view>
+  </view>
+</view>

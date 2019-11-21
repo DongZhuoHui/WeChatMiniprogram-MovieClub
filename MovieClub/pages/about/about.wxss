@@ -1,0 +1,58 @@
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.favorite {
+  border-radius: 10%;
+  margin-top: 100rpx;
+  font-size: 16px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.favorite-list{
+  width: 750rpx;
+  display: block;
+  word-break:break-all;
+}
+
+.favorite-detail{
+  font-size: 14px;
+  background-color: rgb(255, 244, 244);
+  border-radius: 20%;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.history {
+  border-radius: 10%;
+  margin-top: 20rpx;
+  font-size: 16px;
+  border: 1px solid black;
+  text-align: center;
+}
+.history-list{
+  width: 750rpx;
+  display: block;
+  word-break:break-all;
+}
+.history-detail{
+  font-size: 14px;
+  background-color: rgb(255, 244, 244);
+  border-radius: 20%;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}

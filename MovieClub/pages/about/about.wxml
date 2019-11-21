@@ -1,0 +1,21 @@
+<view class='container'>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击加入 Movie Club </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view>
+    <view class='favorite' catchtap='favorite_ellipsis'>收藏夹</view>
+    <view class='favorite-list' style='{{favorite_display}}'>
+      <text class='favorite-detail' wx:for="{{favorite}}" wx:key="unique" data-name='{{item.value}}' data-id='{{item.id}}' data-state='favorite' bindtouchstart="mytouchstart" bindtouchend="mytouchend"  bindtap='aboutToDetailOrDelete'>{{item.value}}</text>
+    </view>
+  </view>
+  <view>
+    <view class='history' catchtap='history_ellipsis'>历史观看</view>
+    <view class='history-list' style='{{history_display}}'>
+      <text class='history-detail' wx:for="{{history}}" wx:key="unique" data-name='{{item.value}}' data-id='{{item.id}}' data-state='history' bindtouchstart="mytouchstart" bindtouchend="mytouchend"  bindtap='aboutToDetailOrDelete'>{{item.value}}</text>
+    </view>
+  </view>
+</view>

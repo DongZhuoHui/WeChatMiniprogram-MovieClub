@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/about/about",
+    "pages/play/play"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "Movie Club",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "Movie",
+        "iconPath": "images/icon/v1.jpg",
+        "selectedIconPath": "images/icon/v2.jpg"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "Me",
+        "iconPath": "images/icon/about_icon1.png",
+        "selectedIconPath": "images/icon/about_icon2.jpeg"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
